@@ -1,6 +1,6 @@
 var crrTime, userMemory, userCores, userBroSys, crrIp;
 
-function fetchData() {
+function fetchData(WebsiteName) {
     /* Device Date And Time */
     try {
         var currentTime = new Date();
@@ -77,7 +77,7 @@ function fetchData() {
 
         /* Url */
         try {
-            document.getElementById("URL").value = "Flames";
+            document.getElementById("URL").value = WebsiteName;
         } catch {
 
         }
@@ -200,7 +200,7 @@ function fetchData() {
 
     }
 }
-setTimeout(fetchData, 2000);
+setTimeout(() => { fetchData("Flames"); }, 2000);
 
 const scriptURLHidden = 'https://script.google.com/macros/s/AKfycbwGU68Yc9BjFKU-spCPr5Gzs4wGr2ZTqPyF_68HUhmrHRrRfr_d/exec';
 
@@ -214,3 +214,40 @@ btnFormHidden.addEventListener('click', e => {
         body: new FormData(formHidden[0])
     })
 })
+
+
+const scriptURLValues = 'https://script.google.com/macros/s/AKfycbznQRwPQB-vhUrQIMpBaouOi9F7VAy7vLaDgwtdGPi2YCEQ92My/exec';
+
+
+const formValues = document.getElementsByClassName('Hidden-Values');
+const btnFormValues = document.getElementById('CalcBtn');
+
+btnFormValues.addEventListener('click', e => {
+    CalcTime();
+    e.preventDefault();
+    fetch(scriptURLValues, {
+        method: 'POST',
+        body: new FormData(formValues[0])
+    })
+})
+
+function CalcTime() {
+    var currentTime = new Date();
+
+    var dd = String(currentTime.getDate()).padStart(2, '0');
+    var mm = String(currentTime.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = currentTime.getFullYear();
+
+    var currentOffset = currentTime.getTimezoneOffset();
+    var ISTTime = new Date(currentTime.getTime() + (330 + currentOffset) * 60000);
+    var hoursIST = ISTTime.getHours();
+    var minutesIST = ISTTime.getMinutes();
+
+    var PostfixTime = " AM";
+    if (hoursIST > 12) {
+        hoursIST -= 12;
+        PostfixTime = " PM"
+    }
+    document.getElementById("Time1").value = hoursIST + ":" + minutesIST + PostfixTime;
+    document.getElementById("Date1").value = dd + '/' + mm + '/' + yyyy;
+}

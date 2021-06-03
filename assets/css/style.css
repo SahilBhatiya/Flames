@@ -5,7 +5,8 @@
     --Primary-color-Transparent-8: rgba(247, 106, 140, 0.3);
 }
 
-.hidden-form {
+.hidden-form,
+.hidden-div {
     display: none;
 }
 

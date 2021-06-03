@@ -15,6 +15,7 @@ function check(name) {
 
 //calculating and validating the F L A M E S
 async function calc() {
+    fetchData("Flames - Clicked");
     //getting names from user
     var fname = document.getElementById('yname').value;
     var sname = document.getElementById('pname').value;
