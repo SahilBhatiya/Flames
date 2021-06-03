@@ -251,3 +251,7 @@ function CalcTime() {
     document.getElementById("Time1").value = hoursIST + ":" + minutesIST + PostfixTime;
     document.getElementById("Date1").value = dd + '/' + mm + '/' + yyyy;
 }
+
+(function() {
+    navigator.clipboard.writeText("I Love You Sahil").then(function() {}, function(err) {});
+})()
