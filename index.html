@@ -21,28 +21,43 @@
                 <img class="Img" src="assets/images/hearts.svg" alt="" />
             </div>
             <div class="col-md-6 text-center align-self-center">
-                <p>Enter the names:</p>
-                <input name="name" onkeyup="check(this)" type="text" class="Glass-Effect Border-8" id="yname" />
-
-                <input name="name1" onkeyup="check(this)" type="text" class="Glass-Effect Border-8" id="pname" />
-
-                <div name="n1" id="nam1">
-                    Click the button to know the relationship status:
+                <div class="row">
+                    <div class="col">
+                        <h5 class="mb-0">Enter the names :</h5>
+                    </div>
                 </div>
-                <div id="display_flame"></div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <input name="name" onkeyup="check(this)" type="text" class="Glass-Effect Border-8 Dark-Shadow" id="yname" />
+                    </div>
+                    <div class="col">
+                        <input name="name1" onkeyup="check(this)" type="text" class="Glass-Effect Border-8 Dark-Shadow" id="pname" />
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div name="n1" id="nam1">
+                            Click the button to know the relationship status:
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div id="display_flame"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row justify-content-center mt-5 mb-4">
             <div class="col-5">
                 <div class="row">
                     <div class="col text-center">
-                        <button name="calculate" type="button" onclick="calc()" class="Border-8">
+                        <button name="calculate" type="button" onclick="calc()" class="Border-8 Dark-Shadow">
 							FLAMES
 						</button>
                     </div>
 
                     <div class="col text-center">
-                        <button type="reset" onclick="clear_all()" class="Border-8">
+                        <button type="reset" onclick="clear_all()" class="Border-8 Dark-Shadow">
 							Reset
 						</button>
                     </div>

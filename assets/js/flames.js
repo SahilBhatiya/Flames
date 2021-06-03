@@ -1,3 +1,7 @@
+async function clear_all() {
+    document.getElementById("yname").value = document.getElementById("pname").value = "";
+}
+
 //checking the user entered name-
 function check(name) {
     var new_name = name.value;
@@ -9,7 +13,7 @@ function check(name) {
 }
 
 //calculating and validating the F L A M E S
-function calc() {
+async function calc() {
     //getting names from user
     var fname = document.getElementById('yname').value;
     var sname = document.getElementById('pname').value;
