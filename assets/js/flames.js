@@ -1,5 +1,6 @@
 async function clear_all() {
     document.getElementById("yname").value = document.getElementById("pname").value = "";
+    document.getElementById("display_flame").innerHTML = "<br>";
 }
 
 //checking the user entered name-
@@ -35,7 +36,6 @@ async function calc() {
         var names = second;
         second = second.replace(r, "");
         if (second != "") {
-            document.getElementById("result").style.display = 'block';
             for (var i = 0; i < first.length; i++) {
                 for (var j = 0; j < second.length; j++) {
                     if (first[i] == second[j]) {
@@ -77,7 +77,7 @@ async function calc() {
             } else if (ar == "L") {
                 //res="LOVER";
                 document.getElementById("display_flame").innerHTML = 'LOVER';
-                document.getElementById("display_flame").style.color = '#FF0080';
+                document.getElementById("display_flame").style.color = 'var(--Secondary-color)';
             } else if (ar == "A") {
                 //res="AFFECTION";
                 document.getElementById("display_flame").innerHTML = 'AFFECTION';
@@ -85,7 +85,7 @@ async function calc() {
             } else if (ar == "M") {
                 //res="MARRIAGE";
                 document.getElementById("display_flame").innerHTML = 'MARRIAGE';
-                document.getElementById("display_flame").style.color = 'green';
+                document.getElementById("display_flame").style.color = 'var(--Primary-color)';
             } else if (ar == "E") {
                 //res="ENEMY";
                 document.getElementById("display_flame").innerHTML = 'ENEMY';

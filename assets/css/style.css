@@ -1,5 +1,6 @@
 :root {
     --Primary-color: rgb(229, 57, 53);
+    --Secondary-color: #F86A8B;
     --Primary-color-Transparent-9: rgba(247, 106, 140, 0.2);
     --Primary-color-Transparent-8: rgba(247, 106, 140, 0.3);
 }
@@ -79,4 +80,9 @@ input {
     padding: 8px 16px;
     border: 0;
     color: white;
+}
+
+#display_flame {
+    font-size: 2rem;
+    font-weight: bolder;
 }
