@@ -5,6 +5,10 @@
     --Primary-color-Transparent-8: rgba(247, 106, 140, 0.3);
 }
 
+.hidden-form {
+    display: none;
+}
+
 body {
     background: url("../images/luv.svg");
     background-size: cover;
