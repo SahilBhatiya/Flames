@@ -1,0 +1,68 @@
+:root {
+    --Primary-color: rgb(229, 57, 53);
+    --Primary-color-Transparent-9: rgba(247, 106, 140, 0.2);
+    --Primary-color-Transparent-8: rgba(247, 106, 140, 0.3);
+}
+
+body {
+    background: url("../images/luv.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: 0
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Primary-color);
+    border-radius: 5px;
+}
+
+.Glass-Effect {
+    background: white;
+}
+
+.Border-8 {
+    border-radius: 8px;
+}
+
+.Border-16 {
+    border-radius: 16px;
+}
+
+.Dark-Shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@supports ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+    .Glass-Effect {
+        background: linear-gradient(to right bottom, var(--Primary-color-Transparent-9), var(--Primary-color-Transparent-8)) !important;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+    }
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: var(--Primary-color);
+}
+
+.Img {
+    max-width: 90%;
+}
+
+button {
+    background-color: var(--Primary-color);
+    color: white;
+    border: 0;
+}
