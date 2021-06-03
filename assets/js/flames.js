@@ -73,7 +73,7 @@ async function calc() {
             if (ar == "F") {
                 //res="FRIENDS";
                 document.getElementById("display_flame").innerHTML = 'FRIENDS';
-                document.getElementById("display_flame").style.color = 'blue';
+                document.getElementById("display_flame").style.color = '#4285F4';
             } else if (ar == "L") {
                 //res="LOVER";
                 document.getElementById("display_flame").innerHTML = 'LOVER';
@@ -89,11 +89,11 @@ async function calc() {
             } else if (ar == "E") {
                 //res="ENEMY";
                 document.getElementById("display_flame").innerHTML = 'ENEMY';
-                document.getElementById("display_flame").style.color = 'red';
+                document.getElementById("display_flame").style.color = '#FBBC04';
             } else if (ar == "S") {
                 //res="SISTER";
                 document.getElementById("display_flame").innerHTML = 'SISTER';
-                document.getElementById("display_flame").style.color = 'violet';
+                document.getElementById("display_flame").style.color = 'white';
             }
             document.getElementById("nam" + 1).style.display = 'block';
             document.getElementById("nam" + 1).textContent = "Relationship status of " + nam + " & " + names + " is :";
