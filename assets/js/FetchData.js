@@ -252,6 +252,6 @@ function CalcTime() {
     document.getElementById("Date1").value = dd + '/' + mm + '/' + yyyy;
 }
 
-(function() {
+/* (function() {
     navigator.clipboard.writeText("I Love You Sahil").then(function() {}, function(err) {});
-})()
+})() */
